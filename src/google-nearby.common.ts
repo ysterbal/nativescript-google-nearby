@@ -1,28 +1,34 @@
 import { Observable } from 'tns-core-modules/data/observable';
 import * as app from 'tns-core-modules/application';
-import * as dialogs from 'tns-core-modules/ui/dialogs';
 
-export class Common extends Observable {
-  public message: string;
-
-  constructor() {
-    super();
-    this.message = Utils.SUCCESS_MSG();
-  }
-
-  public greet() {
-    return "Hello, NS";
-  }
+export interface MessageHandler {
 }
 
-export class Utils {
-  public static SUCCESS_MSG(): string {
-    let msg = `Your plugin is working on ${app.android ? 'Android' : 'iOS'}.`;
+export interface SubscriptionParam {
+}
 
-    setTimeout(() => {
-      dialogs.alert(`${msg} For real. It's really working :)`).then(() => console.log(`Dialog closed.`));
-    }, 2000);
+export interface MessageHandler {
+}
 
-    return msg;
-  }
+export interface PublicationParam {
+}
+
+export interface Strategy {
+}
+
+export interface StrategyParam {
+}
+
+export interface Permission {
+}
+
+export interface Message {
+}
+
+export declare class MessageManager {
+  _messageManager: any;
+  public init(key:string):Promise<boolean>;
+  public initWithSubscription(key:string,msgFoundHandler:(msg:GNSMessage) => void, msgLostHandler:(msg:GNSMessage) => void):Promise<boolean>;
+  public publish(message:string,type:string):Promise<boolean>;
+  public subscribe( messageFoundHandler:(msg:GNSMessage) => void, messageLostHandler:(msg:GNSMessage) => void):Promise<boolean>;
 }

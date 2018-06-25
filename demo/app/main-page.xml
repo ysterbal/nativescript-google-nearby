@@ -1,6 +1,11 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page"
   xmlns:ui="nativescript-google-nearby">
+  <Page.actionBar>
+        <ActionBar title="Joyride" icon="" class="action-bar">
+        </ActionBar>
+  </Page.actionBar>
   <StackLayout class="p-20">
+    <Button text="Publish!" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
     <Label text="{{ message }}" class="t-20 text-center c-black" textWrap="true"/>
   </StackLayout>
 </Page>

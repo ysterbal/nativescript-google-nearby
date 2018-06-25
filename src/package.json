@@ -8,7 +8,14 @@
         "platforms": {
             "android": "4.0.0",
             "ios": "4.0.0"
-        }
+        },
+        "hooks": [
+            {
+                "type": "after-prepare",
+                "script": "scripts/after-prepare.js",
+                "inject": true
+            }
+        ]
     },
     "scripts": {
         "tsc": "tsc -skipLibCheck",
@@ -26,7 +33,9 @@
         "plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-google-nearby && tns plugin add ../src",
         "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
         "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
-        "prepack": "npm run build.native"
+        "prepack": "npm run build.native",
+        "postinstall": "node postinstall.js",
+        "preuninstall": "node preuninstall.js"
     },
     "keywords": [
         "NativeScript",
@@ -53,6 +62,8 @@
         "tslint": "^5.0.0",
         "semver": "^5.5.0"
     },
-    "dependencies": {},
+    "dependencies": {
+        "nativescript-hook": "^0.2.2"
+    },
     "bootstrapper": "nativescript-plugin-seed"
 }
