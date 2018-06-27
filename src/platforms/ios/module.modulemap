@@ -1,0 +1,4 @@
+module NearbyMessages {
+    umbrella "../Pods/NearbyMessages/Sources"
+    export *
+}

@@ -1,7 +1,7 @@
 {
     "name": "nativescript-google-nearby",
-    "version": "1.0.0",
-    "description": "Your awesome NativeScript plugin.",
+    "version": "1.0.1",
+    "description": "Nativescript Google Nearby plugin (Un-Official)",
     "main": "google-nearby",
     "typings": "index.d.ts",
     "nativescript": {
@@ -44,8 +44,8 @@
         "iOS"
     ],
     "author": {
-        "name": "Your Name",
-        "email": "youremail@yourdomain.com"
+        "name": "Johan Van Zijl",
+        "email": "ysterbal@gmail.com"
     },
     "bugs": {
         "url": "https://github.com/ysterbal/nativescript-google-nearby/issues"

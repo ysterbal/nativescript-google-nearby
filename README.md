@@ -8,12 +8,15 @@ Expose the basic P2P messaging provided by Google Nearby within a Nativescript p
 tns plugin add nativescript-google-nearby
 ```
 
-## Usage 
+## Usage
 
+* Get an Google Nearby API key see [Google Developers Guide](https://developers.google.com/nearby/messages/overview)
+* Initialize the SDK using the key
+* Add a subscription and provide callbacks and process 
+* Publish messages
 
 ## API
 
-    
 ## License
 
 Apache License Version 2.0, January 2004
