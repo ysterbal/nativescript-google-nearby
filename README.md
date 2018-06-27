@@ -2,7 +2,7 @@
 
 Expose the basic P2P messaging provided by Google Nearby within a Nativescript plugin, currently we only support iOS but Android support is pending.
 
-## Buidling from src
+## Buidling from source
 
 ```javascript
 $ git clone https://github.com/ysterbal/nativescript-google-nearby .
@@ -11,7 +11,7 @@ $ npm install
 $ npm run build 
 ```
 
-## Installation
+## Installation into a nativescript project
 
 ```javascript
 tns plugin add nativescript-google-nearby
